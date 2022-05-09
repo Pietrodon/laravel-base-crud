@@ -5,6 +5,11 @@
     <h1>Il Mio Portale Di Fumetti</h1>
     <h3>Qui potrai trovare i fumetti più famosi</h3>
 </div>
+<div class="container d-flex justify-content-center">
+    <form action="{{route('books.create')}}">
+        <button type="submit" class="btn btn-outline-danger">Aggiungi Fumetto</button>
+    </form>
+</div>
 <div class="container d-flex">
     @foreach ($books as $book)
         <div class="card m-3" style="width: 18rem;">
