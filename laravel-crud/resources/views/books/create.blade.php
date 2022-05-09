@@ -1,14 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <form action="{{route('books.store')}}" method="POST">
-        @csrf
-        <input type="text" name="title" placeholder="Titolo del libro">
-        <textarea name="plot" id="plot" cols="30" rows="10" placeholder="Trama del libro"></textarea>
-        <input type="submit" value="Crea">
-    </form>
-</div>
+<form action="{{route('books.store')}}" method="POST">
+    @csrf
+    <div class="container">
+        <div class="form-group ">
+            <label for="title">Titolo del fumetto</label>
+            <input type="text" name="title" placeholder="Titolo del Fumetto">
+          </div>
+          <div class="form-group">
+            <label for="text">Trama del fumetto</label>
+            <textarea name="plot" id="plot" cols="30" rows="10" placeholder="Trama del Fumetto"></textarea>
+          </div>
 
+          <button type="submit" class="btn btn-primary">Crea</button>
+    </div>
+</form>
 @endsection
 
