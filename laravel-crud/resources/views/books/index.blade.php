@@ -11,7 +11,10 @@
             <img src="https://montagnolirino.it/wp-content/uploads/2015/12/immagine-non-disponibile.png" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{$book->title}}</h5>
-            <a href="{{route('books.show', $book)}}" class="btn btn-outline-primary d-flex m-1">Vedi info</a>
+            <form action="{{route('books.show', $book->id)}}" method="get">
+                @csrf
+                <button type="submit" class="btn btn-outline-primary d-flex m-1">Vedi info</button>
+            </form>
             <form action="{{route('books.destroy', $book)}}" method="post">
                 @csrf
                 @method('delete')
