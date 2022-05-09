@@ -11,6 +11,7 @@
         <div class="card-body">
           <h5 class="card-title">{{$book->title}}</h5>
           <p class="card-text">{{$book->plot}}</p>
+          <p class="card-text">{{$book->writer}}</p>
           <a href="{{route('books.index')}}" class="btn btn-primary">Torna indietro</a>
         </div>
       </div>

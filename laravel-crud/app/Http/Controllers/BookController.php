@@ -41,6 +41,7 @@ class BookController extends Controller
         $book = new Book();
         $book->title = $data['title'];
         $book->plot = $data['plot'];
+        $book->plot = $data['writer'];
         $book->save();
         // dd($request);
 

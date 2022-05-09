@@ -10,7 +10,7 @@
         <button type="submit" class="btn btn-outline-danger">Aggiungi Fumetto</button>
     </form>
 </div>
-<div class="container d-flex">
+<div class="container d-flex flex-wrap">
     @foreach ($books as $book)
         <div class="card m-3" style="width: 18rem;">
             <img src="https://montagnolirino.it/wp-content/uploads/2015/12/immagine-non-disponibile.png" class="card-img-top" alt="...">
